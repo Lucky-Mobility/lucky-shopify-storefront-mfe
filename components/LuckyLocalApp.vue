@@ -37,7 +37,8 @@ export default {
       return new Promise(async (resolve, reject) => {
         try {
           //@ts-ignore
-          const res = (await import('luckyLocal/LuckyPickupButton')).default
+          const res = (await import('luckyLocal/LuckyPickupButton')).default // Note: luckyLocal is the name you define in MF in your nuxt.config.js. And LuckyPickupButton is the our fixed name
+           
           res.mount(ele, {
             productId,
             selectedVariantId: defaultSelectedVariantId,
