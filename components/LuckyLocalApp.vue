@@ -2,7 +2,7 @@
   <div>
     <div ref="luckyApp" id="lucky-affiliating"></div>
     <div id="aff-lucky-plugin-modal"></div>
-    <button @click="changeSelectedVariant">Change variant</button>
+    <!-- <button @click="changeSelectedVariant">Change variant</button> -->
   </div>
 </template>
 
@@ -55,39 +55,4 @@ export default {
     }
   },
 }
-
-// export default defineComponent({
-//   ssr: false,
-//   async setup() {
-//     const luckyApp = ref(null)
-
-//     async function fetchImport() {
-//       return new Promise(async (resolve, reject) => {
-//         try {
-//           //@ts-ignore
-//           const res = (await import('luckyLocal/LuckyPickupButton')).default
-
-//           console.log(luckyApp.value, res)
-
-//           res.mount(luckyApp, {
-//             productId: '12412312312',
-//             selectedVariantId: '123123123123',
-//             baseURL: '/api/lucky',
-//           })
-//           resolve(true)
-//         } catch (err) {
-//           reject(err)
-//         }
-//       })
-//     }
-
-//     onMounted(() => {
-//       if (typeof window !== 'undefined') {
-//         fetchImport()
-//       }
-//     })
-
-//     return { luckyApp }
-//   },
-// })
 </script>
