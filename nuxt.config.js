@@ -38,7 +38,6 @@ export default {
   ],
   build: {
     extend(config, { isClient }) {
-      // Add a CSV loader
       if (isClient) {
         config.plugins.push(
           new MF({
