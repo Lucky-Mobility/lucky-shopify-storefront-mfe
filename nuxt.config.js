@@ -54,12 +54,12 @@ export default {
   },
   serverMiddleware: [
     {
-      path: process.env.LUCKY_PROXY_PATH,
+      path: process.env.LUCKY_BASE_PROXY_URL, //because we're using self-host is also path 
       handler: '~/server-middleware/lucky-ext-api-proxy.js',
     },
   ],
   publicRuntimeConfig: {
-    luckyProxyPath: process.env.LUCKY_PROXY_PATH,
+    luckyBaseProxyUrl: process.env.LUCKY_BASE_PROXY_URL,
   },
   privateRuntimeConfig: {},
 }

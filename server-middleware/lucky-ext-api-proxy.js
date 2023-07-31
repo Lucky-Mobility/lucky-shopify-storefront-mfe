@@ -18,7 +18,7 @@ const filter = function (pathname, req) {
   return hasLuckyConfigs && ['GET', 'POST'].includes(req.method)
 }
 app.use(
-  '*',
+  '*', // Note: because we're just forwarding & using /shopify. if your LUCKY_BASE_PROXY_URL isn't /shopify, please convert path to /shopify before sending request
   createProxyMiddleware(filter, {
     target: process.env.LUCKY_EXT_API_URL,
     changeOrigin: true,

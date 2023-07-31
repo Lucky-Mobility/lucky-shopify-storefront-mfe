@@ -31,7 +31,7 @@ export default {
   mounted() {
     const ele = this.$refs.luckyApp
     const { productId, defaultSelectedVariantId } = this.productData
-    const proxyPath = this.$config.luckyProxyPath
+    const luckyBaseProxyUrl = this.$config.luckyBaseProxyUrl
 
     async function fetchImport() {
       return new Promise(async (resolve, reject) => {
@@ -41,7 +41,7 @@ export default {
           res.mount(ele, {
             productId,
             selectedVariantId: defaultSelectedVariantId,
-            baseURL: proxyPath,
+            baseURL: luckyBaseProxyUrl, // or can be your proxy base url. e.g. http://caliray-lucky.com/shopify/some-path
           })
           resolve(true)
         } catch (err) {
