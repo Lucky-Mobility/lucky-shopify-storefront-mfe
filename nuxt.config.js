@@ -45,6 +45,7 @@ export default {
             filename: 'remoteEntry.js',
             remotes: {
               luckyLocal: `promise import("${process.env.LUCKY_LOCAL_APP_SCRIPT_SRC}")`,
+              luckyStoreLocator: `promise import("${process.env.LUCKY_STORE_LOCATOR_SCRIPT_SRC}")`,
             },
           })
         )
