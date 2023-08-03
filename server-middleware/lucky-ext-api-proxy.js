@@ -5,7 +5,7 @@ const app = express()
 
 const hasLuckyConfigs =
   process.env.LUCKY_EXT_API_URL &&
-  process.env.LUCKY_PROXY_PATH &&
+  process.env.LUCKY_BASE_PROXY_URL &&
   process.env.LUCKY_API_KEY &&
   process.env.LUCKY_LOCAL_APP_SCRIPT_SRC
 
